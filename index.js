@@ -126,11 +126,11 @@ ${_this._config.memory.warning[0].footer}`
                                 })
                         } else if (_this._config.target === 'google-chat') {
                             let text = `🛎 ${_this._config.memory.warning[0].pretext}\n
-Event:      \` Memory leak\` \n
-Server:     \` ${server} \` \n
-Process id/name/status:    \` ${proc.pm_id} ${proc.name}  ${proc.pm2_env.status} \`\n
-Memory & Cpu: \` ${func.bytesToSize(proc.monit.memory)} & ${proc.monit.cpu}% \`\n
-Restart time: \` ${proc.pm2_env.restart_time} \`\n
+Event:      \` Memory leak\`
+Server:     \` ${server} \`
+Process id/name/status:    \` ${proc.pm_id} ${proc.name}  ${proc.pm2_env.status} \`
+Memory & Cpu: \` ${func.bytesToSize(proc.monit.memory)} & ${proc.monit.cpu}% \`
+Restart time: \` ${proc.pm2_env.restart_time} \`
 ${_this._config.memory.warning[0].footer}`
 
                             chttp.send({
