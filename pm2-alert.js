@@ -20,7 +20,7 @@ let config = {
     /**
      * set target
      */
-    target: 'slack', // Custom or Slack
+    target: 'slack', // custom or slack or google-chat
 
 
 
@@ -29,7 +29,7 @@ let config = {
 
 
     info: {
-        serverName: '192.168.1.1 US'
+        serverName: '192.168.1.1 US' // Can be IP or HostName
     },
 
 
@@ -63,7 +63,7 @@ let config = {
         warning: [
             {
                 "color": "warning",
-                "pretext": "we noticed that your process not working well",
+                "pretext": "We noticed that your process not working well",
                 "footer": "Raychat Process Managing Service",
                 "footer_icon": "https://app.raychat.io/images/favicon.png",
             }
