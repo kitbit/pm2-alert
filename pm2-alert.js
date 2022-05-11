@@ -63,8 +63,8 @@ let config = {
         warning: [
             {
                 "color": "warning",
-                "pretext": "We noticed that your process not working well",
-                "footer": "Raychat Process Managing Service",
+                "pretext": "We noticed that your process is/are not working well",
+                "footer": "-----------------------------------------------",
                 "footer_icon": "https://app.raychat.io/images/favicon.png",
             }
         ]
