@@ -124,6 +124,26 @@ ${_this._config.memory.warning[0].footer}`
                                     console.error(err)
 
                                 })
+                        } else if (_this._config.target === 'google-chat') {
+                            let text = `🛎 ${_this._config.memory.warning[0].pretext}\n
+Event:      \` Memory leak\` \n
+Server:     \` ${server} \` \n
+Process id/name/status:    \` ${proc.pm_id} ${proc.name}  ${proc.pm2_env.status} \`\n
+Memory & Cpu: \` ${func.bytesToSize(proc.monit.memory)} & ${proc.monit.cpu}% \`\n
+Restart time: \` ${proc.pm2_env.restart_time} \`\n
+${_this._config.memory.warning[0].footer}`
+
+                            chttp.send({
+                                url: _this._config.to,
+                                json: { "text": text }
+                            })
+                                .then(res => {
+                                    console.log('Google Chat - notification sent!')
+                                })
+                                .catch(err => {
+                                    console.error(err)
+
+                                })
                         } else {
                             let fields = [
                                 {
